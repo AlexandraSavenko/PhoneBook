@@ -12,6 +12,7 @@ const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const RegisterPage = lazy(() => import("./pages/RegisterPage/RegisterPage"));
 const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
 const ContactsPage = lazy(() => import("./pages/ContactsPage/ContactsPage"));
+
 function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
@@ -32,11 +33,6 @@ function App() {
               <RestrictedRoute component={<RegisterPage />} redirectTo="/" />
             }
           />
-          {/* <Route
-            path="/register"
-            element={<RestrictedRoute component={<RegisterPage />} />}
-            redirectTo="/"
-          /> */}
           <Route
             path="/login"
             element={
@@ -46,14 +42,6 @@ function App() {
               />
             }
           />
-          {
-            //For some reason this code doesn't work though I can't see any difference between them
-            /* <Route
-            path="/login"
-            element={<RestrictedRoute component={<LoginPage />} />}
-            redirectTo="/contacts"
-          /> */
-          }
           <Route
             path="/contacts"
             element={

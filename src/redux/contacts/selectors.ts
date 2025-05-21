@@ -1,3 +1,5 @@
-export const selectContacts = (state) => state.contacts.items;
-export const selectIsLoading = (state) => state.contacts.isLoading;
-export const selectError = (state) => state.contacts.error;
+import { RootState } from "../store";
+
+export const selectContacts = (state: RootState) => state.contacts.items;
+export const selectIsLoading = (state: RootState) => state.contacts.isLoading;
+export const selectError = (state: RootState) => state.contacts.error;

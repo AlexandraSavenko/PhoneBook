@@ -3,9 +3,16 @@ import { useDispatch } from "react-redux";
 import { IoMdPerson } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { deleteContact } from "../../redux/contacts/operations.js";
+import { AppDispatch } from "../../redux/store";
 
-export default function Contact({ contacts: { id, name, number } }) {
-  const dispatch = useDispatch();
+interface Props {
+  singleContact:
+  {id: string,
+  name: string,
+  number: string}
+}
+const Contact: React.FC<Props> = ({ singleContact: { id, name, number } }) => {
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleDelete = () => {
     dispatch(deleteContact(id));
@@ -30,3 +37,4 @@ export default function Contact({ contacts: { id, name, number } }) {
     </div>
   );
 }
+export default Contact;

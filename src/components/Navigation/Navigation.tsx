@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import css from "./Navigation.module.css";
 
-export default function Navigation() {
+const Navigation: React.FC = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <nav>
@@ -13,3 +13,4 @@ export default function Navigation() {
     </nav>
   );
 }
+export default Navigation;

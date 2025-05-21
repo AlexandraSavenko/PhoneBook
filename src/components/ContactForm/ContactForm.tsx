@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { addContact } from "../../redux/contacts/operations";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
 const UserScheme = Yup.object().shape({
   name: Yup.string()
     .min(3, "Too short! Not less than 3 symbols.")
@@ -15,10 +16,15 @@ const UserScheme = Yup.object().shape({
     .max(50, "Too many! No more than 50 symbols.")
     .required("The phone number should be here!"),
 });
+
+export interface ContactInfo {
+  name: string,
+  number: string
+}
 export default function ContactForm() {
   const id = useId();
-  const dispatch = useDispatch();
-  const handleAddContact = (contactInfo) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const handleAddContact = (contactInfo: ContactInfo) => {
     dispatch(addContact({ ...contactInfo }));
   };
   return (

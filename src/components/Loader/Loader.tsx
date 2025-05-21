@@ -6,7 +6,7 @@ export default function Loader() {
         visible={true}
         height="80"
         width="80"
-        color="#4fa94d"
+        colors={["rgba(79, 169, 77, 1)", "rgba(79, 169, 77, 0.6)", "rgba(79, 169, 77, 0.3)"]}
         ariaLabel="radio-loading"
         wrapperStyle={{}}
         wrapperClass=""

@@ -6,9 +6,10 @@ import Loader from "../../components/Loader/Loader";
 import { fetchContacts } from "../../redux/contacts/operations";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import { AppDispatch } from "../../redux/store";
 
 export default function ContactsPage() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);

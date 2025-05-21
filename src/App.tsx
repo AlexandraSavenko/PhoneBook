@@ -7,14 +7,16 @@ import { refreshUser } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 import RestrictedRoute from "./components/RestrictedRoute";
 import PrivateRoute from "./components/PrivateRoute";
+import {FC} from "react"
+import { AppDispatch } from "./redux/store";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const RegisterPage = lazy(() => import("./pages/RegisterPage/RegisterPage"));
 const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
 const ContactsPage = lazy(() => import("./pages/ContactsPage/ContactsPage"));
 
-function App() {
-  const dispatch = useDispatch();
+const App: FC = () => {
+  const dispatch = useDispatch<AppDispatch>();
   const isRefreshing = useSelector(selectIsRefreshing);
   useEffect(() => {
     dispatch(refreshUser());

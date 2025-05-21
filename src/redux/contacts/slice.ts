@@ -9,6 +9,7 @@ export const slice = createSlice({
     isLoading: false,
     error: false,
   },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.pending, (state) => {

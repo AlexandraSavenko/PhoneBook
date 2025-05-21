@@ -1,14 +1,8 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-
-interface Credentials {
-  user: {
-      name: string | null,
-      email: string | null,
-    } | null,
-  token: string | null,
-}
+import { RegFormValues } from "../../components/RegisterForm/RegisterForm";
+import { LogFormValues } from "../../components/LoginForm/LoginForm";
 
 axios.defaults.baseURL = "https://connections-api.goit.global";
 
@@ -25,9 +19,6 @@ const clearAuthHeader = (): void => {
 };
 
 //------------------------------------------------handleError--------------------------------------------------------------------------
-interface Error {
-  message: string
-}
 
 const handleError = (error: unknown, rejectWithValue: (value: string) => unknown) => {
   if (error instanceof Error) {
@@ -39,7 +30,7 @@ const handleError = (error: unknown, rejectWithValue: (value: string) => unknown
 //------------------------------------------------------------------------------------------------------------------------------------
 export const register = createAsyncThunk(
   "auth/register",
-  async (credentials: Credentials, thunkApi) => {
+  async (credentials: RegFormValues, thunkApi) => {
     try {
       const { data } = await api.post("/users/signup", credentials);
       setAuthHeader(data.token);
@@ -52,7 +43,7 @@ export const register = createAsyncThunk(
 
 export const logIn = createAsyncThunk(
   "auth/login",
-  async (credentials: Credentials, thunkApi) => {
+  async (credentials: LogFormValues, thunkApi) => {
     try {
       const { data } = await api.post("/users/login", credentials);
       setAuthHeader(data.token);

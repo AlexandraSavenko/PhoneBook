@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { logIn, logOut, refreshUser, register } from "./operations";
 
 interface authState {
@@ -28,6 +28,7 @@ const initialState: authState = {
 const authSlice = createSlice({
   name: "auth",
   initialState: initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(register.fulfilled, (state, action) => {

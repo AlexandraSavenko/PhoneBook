@@ -1,7 +1,10 @@
 import { Suspense } from "react";
 import AppBar from "./AppBar/AppBar";
 
-export default function Layout({ children }) {
+interface Props {
+  children: React.ReactNode
+}
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div>
       <AppBar />
@@ -9,3 +12,4 @@ export default function Layout({ children }) {
     </div>
   );
 }
+export default Layout;

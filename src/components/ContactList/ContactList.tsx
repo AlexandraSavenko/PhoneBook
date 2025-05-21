@@ -6,7 +6,6 @@ import { string } from "yup";
 
 const ContactList = () => {
   const visibleNumbers = useSelector(selectVisibleContacts);
-console.log(visibleNumbers)
   return (
     <ul className={css.list}>
       {visibleNumbers.length > 0 ? (

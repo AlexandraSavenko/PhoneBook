@@ -4,6 +4,11 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import { ContactInfo } from "../../components/ContactForm/ContactForm";
 
+interface newContact {
+  id: string,
+  name: string,
+  number: string
+}
 
 const handleError = (error: unknown, rejectWithValue: (value: string) => unknown) => {
   if (error instanceof Error) {

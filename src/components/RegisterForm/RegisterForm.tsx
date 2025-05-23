@@ -21,19 +21,19 @@ export default function RegisterForm() {
       initialValues={{ name: "", email: "", password: "" }}
       onSubmit={handleSubmit}
     >
-      <Form>
+      <Form className={css.form}>
         <label>
           Usarname
-          <Field type="text" name="name" />
         </label>
+        <Field type="text" name="name" />
         <label>
           Email
-          <Field type="email" name="email" />
         </label>
+        <Field type="email" name="email" />
         <label>
           Password
-          <Field type="password" name="password" />
         </label>
+        <Field type="password" name="password" />
         <button type="submit">Register</button>
       </Form>
     </Formik>

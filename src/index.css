@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --background-image: url("./img/galaxy-night-landscape-min.jpg");
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -13,22 +14,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+[data-theme ="dark"]{
+  --background-color: #fff;
+  --background-image: url("./img/galaxy-night-landscape-min.jpg");
+  --first-font-color: #fff;
+  --second-font-color: #fff;
 }
-a:hover {
-  color: #535bf2;
+
+[data-theme ="light"]{
+  --background-color: #fff;
+  --first-font-color: #fff;
+  --second-font-color: #fff;
+    --background-image: url("https://img.freepik.com/premium-vector/star-wars-galaxy-background_510308-302.jpg");
+
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* background-image: url(./img/galaxy-night-landscape-min.jpg); */
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center;
 }
@@ -40,22 +49,11 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  border: none;
+  outline: none;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 #root {
   width: 100%;
@@ -70,5 +68,25 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    padding: 0 100px;
+    max-width: 1280px;
   }
 }

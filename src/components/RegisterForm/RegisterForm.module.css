@@ -1,0 +1,15 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid red;
+}
+
+.form input{
+    padding: 4px 16px;
+
+}
+button{
+    padding: 8px 16px;
+    border-radius: 4px;
+}

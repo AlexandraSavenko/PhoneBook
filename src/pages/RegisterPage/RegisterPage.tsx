@@ -3,7 +3,7 @@ import css from './RegisterPage.module.css'
 
 export default function RegisterPage() {
   return (
-    <div>
+    <div className={css.wrap}>
       <RegisterForm />
     </div>
   );

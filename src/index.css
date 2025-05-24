@@ -2,11 +2,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --background-image: url("./img/galaxy-night-landscape-min.jpg");
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,10 +12,12 @@
 }
 
 [data-theme ="dark"]{
-  --background-color: #fff;
+  --background-color: rgba(133, 193, 233, 0.5);
+  --button-bg-color: rgb(40, 56, 71); 
   --background-image: url("./img/galaxy-night-landscape-min.jpg");
-  --first-font-color: #fff;
-  --second-font-color: #fff;
+  --border-color: rgb(88, 168, 248);
+  --first-font-color: rgb(244, 246, 249 );
+  --second-font-color: rgb(53, 152, 250);
 }
 
 [data-theme ="light"]{
@@ -48,7 +47,6 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
   border: none;
   outline: none;
   cursor: pointer;

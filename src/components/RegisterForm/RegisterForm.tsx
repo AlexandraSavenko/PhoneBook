@@ -22,15 +22,15 @@ export default function RegisterForm() {
       onSubmit={handleSubmit}
     >
       <Form className={css.form}>
-        <label>
+        <label htmlFor="name">
           Usarname
         </label>
         <Field type="text" name="name" />
-        <label>
+        <label htmlFor="email">
           Email
         </label>
         <Field type="email" name="email" />
-        <label>
+        <label htmlFor="password">
           Password
         </label>
         <Field type="password" name="password" />

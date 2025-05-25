@@ -13,6 +13,7 @@
     1px -1px 0 var(--second-border-color),
     -1px 1px 0 var(--second-border-color),
     1px 1px 0 var(--second-border-color);
+    margin-top: 20px;
 }
 
 .header span{

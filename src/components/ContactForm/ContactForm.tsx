@@ -2,7 +2,7 @@ import { useId } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { addContact } from "../../redux/contacts/operations";
-import css from "./ContactForm.module.css";
+import css from "../FormStyles.module.css";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../redux/store";
 const UserScheme = Yup.object().shape({
@@ -38,26 +38,30 @@ export default function ContactForm() {
       }}
     >
       <Form className={css.form}>
-        <label className={css.text} htmlFor={`${id}-name`}>
-          Name
-        </label>
+        <div className={css.inputwrap}>
         <Field
-          className={`${css.input} ${css.text}`}
+          className={css.input}
           type="text"
           id={`${id}-name`}
           name="name"
+          placeholder=" " 
+          autoComplete="off"
         />
+        <label className={css.label} htmlFor={`${id}-name`}>Name</label>
         <ErrorMessage name="name" component="span" className={css.errText} />
-        <label className={css.text} htmlFor={`${id}-number`}>
-          Number
-        </label>
+        </div>
+        <div className={css.inputwrap}>
         <Field
-          className={`${css.input} ${css.text}`}
+          className={css.input}
           type="text"
           id={`${id}-number`}
           name="number"
+          placeholder=" " 
+          autoComplete="off"
         />
+        <label className={css.label} htmlFor={`${id}-number`}>Number</label>
         <ErrorMessage name="number" component="span" className={css.errText} />
+        </div>
         <button className={css.button} type="submit">
           Add contact
         </button>

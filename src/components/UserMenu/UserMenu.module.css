@@ -1,0 +1,15 @@
+.usermenu{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.usermenu p{
+    text-wrap: wrap;
+    font-size: 16px;
+    line-height: 1;
+    background-color: var(--background-color);
+    padding: 8px;
+    border-radius: 4px;
+    width: 100px;
+}

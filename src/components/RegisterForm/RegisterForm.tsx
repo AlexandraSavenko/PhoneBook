@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import css from "./RegisterForm.module.css";
+import css from "../FormStyles.module.css";
 import { register } from "../../redux/auth/operations";
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { AppDispatch } from "../../redux/store";

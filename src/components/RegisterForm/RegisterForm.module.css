@@ -6,7 +6,6 @@
     padding: 20px;
     background-color: var(--background-color);
     border-radius: 4px;
-    min-width: 320px;
     max-width: 450px;
     margin: 0 auto;
 }

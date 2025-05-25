@@ -6,7 +6,6 @@
     padding: 20px;
     background-color: var(--background-color);
     border-radius: 4px;
-    min-width: 320px;
     margin: 0 auto;
 }
 .inputwrap{

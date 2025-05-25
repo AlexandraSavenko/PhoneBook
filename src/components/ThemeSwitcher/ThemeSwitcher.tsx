@@ -17,13 +17,13 @@ export default function ThemeSwitcher () {
     }, [theme])
 
     return <div className={css.themeBox}>
-        <p>you are currently in a {theme === "dark" ? "dark" : "light"} mode</p>
+        
         <label className={css.switch}>
             <input type='checkbox' onChange={switchTheme} checked={theme === 'dark'}/>
             <span className={css.themebtn}>
                { theme === "dark" ? <Dark/> : <Light/> }
             </span>
         </label>
-        
+        <p>you are currently in a {theme === "dark" ? "dark" : "light"} mode</p>
     </div>
 }

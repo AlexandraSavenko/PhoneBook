@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  gap: 4px;
   background-color: var(--second-bg-color);
   padding: 8px 16px;
 }

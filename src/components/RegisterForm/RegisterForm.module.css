@@ -7,6 +7,7 @@
     background-color: var(--background-color);
     border-radius: 4px;
     min-width: 320px;
+    max-width: 450px;
     margin: 0 auto;
 }
 .inputwrap{
@@ -58,6 +59,11 @@ cursor: pointer;
 
 .input-wrap:hover + .eye, .input-wrap:focus-within + .eye{
     color: var(--border-color);
+}
+
+.warning{
+    font-size: 12px;
+    text-wrap: wrap;
 }
 button{
     padding: 8px 16px;

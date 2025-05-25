@@ -19,7 +19,7 @@ export default function RegisterForm() {
   const [visible, setVisible] = useState(false)
 
   const FormSchema = Yup.object().shape({
-    name: Yup.string().required(),
+    name: Yup.string().required("Required"),
     email: Yup.string().email("Must be a valid email!").required("Required"),
     password: Yup.string()
     .min(8, 'Password must be 8 characters long')
@@ -45,18 +45,18 @@ export default function RegisterForm() {
         <div className={css.inputwrap}>
         <Field type="text" name="name" className={css.input} placeholder=" " autoComplete="off" />
         <label htmlFor="name" className={css.label}>Usarname</label>
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <p className={css.warning}>{errors.name}</p>}
         </div>
         <div className={css.inputwrap}>
         <Field type="email" name="email" className={css.input} placeholder=" " autoComplete="off" />
         <label htmlFor="email" className={css.label}>Email</label>
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className={css.warning}>{errors.email}</p>}
         </div>
         <div className={css.inputwrap}>
         <Field type={visible ? "text" : "password"} name="password" className={css.input} placeholder=" " autoComplete="off"/>
         <label htmlFor="password" className={css.label}>Password</label>
         <span className={css.eye} onClick={() => setVisible(!visible)} >{visible ? <FaEyeSlash/> : <FaEye/>}</span>
-        {errors.password && <p>{errors.password}</p>}
+        {errors.password ? <p className={css.warning}>{errors.password}</p> : <p className={css.warning}>The password must be 8+ characters long, including at least one uppercase letter, one number and one symbol</p> }
         </div>
         <button type="submit">Register</button>
       </Form>

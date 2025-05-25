@@ -2,7 +2,7 @@
     display: flex;
     gap: 4px;
 }
-.themeBtn{
+/* .themeBtn{
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -17,10 +17,10 @@
 
 .themeBtn:nth-child(2){
     background-color: #d9dad7;
-}
-.active{
+} */
+/* .active{
     border-color: #f96d00;
-}
+} */
 
 .switch {
     position: relative;
@@ -51,7 +51,7 @@
   
   .slider:before {
     position: absolute;
-    content: "\1F609";
+    content: "";
     top: 1px;
     background-color: #d9dad7;
     -webkit-transition: .4s;
@@ -67,7 +67,7 @@
   }
   
   input:checked + .slider:before {
-    content: '\1F60E';
+    content: '';
     background-color: #222831;
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);

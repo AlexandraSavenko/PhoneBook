@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import Light from "../../img/icons8-r2-d2.svg"
+import Dark from "../../img/icons8-star-wars.svg"
 import css from './ThemeSwitcher.module.css'
 import clsx from 'clsx'
 export default function ThemeSwitcher () {
@@ -17,7 +19,10 @@ export default function ThemeSwitcher () {
     return <div className={css.themeBox}>
         <label className={css.switch}>
             <input type='checkbox' onChange={switchTheme} checked={theme === 'dark'}/>
-            <span className={clsx(css.slider, css.round) }></span>
+            <span className={clsx(css.slider, css.round) }>
+               { theme === "dark" ? <Dark/> : <Light/> }
+            </span>
         </label>
+        <p>you are currently in a {theme === "dark" ? "dark" : "light"} mode</p>
     </div>
 }

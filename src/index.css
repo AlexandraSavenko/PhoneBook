@@ -1,6 +1,8 @@
 :root {
-  --main-font: 'Star Wars', sans-serif;;
-  /* https://www.cdnfonts.com/star-wars.font */
+  --first-font: 'Star Wars', sans-serif;  /* https://www.cdnfonts.com/star-wars.font */
+  --second-font: "WDXL Lubrifont TC", sans-serif;;
+
+  font-family: var(--second-font);
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -21,10 +23,13 @@
 }
 
 [data-theme ="light"]{
-  --background-color: #fff;
-  --first-font-color: #fff;
-  --second-font-color: #fff;
-    --background-image: url("https://img.freepik.com/premium-vector/star-wars-galaxy-background_510308-302.jpg");
+  --background-color: rgb(96, 127, 148);
+  --button-bg-color: rgb(40, 56, 71);
+  --background-image: url("./img/desert-day-landscape-min.jpg");
+  --border-color: rgb(88, 168, 248);
+  --second-border-color: #FFE81F;
+  --first-font-color: rgb(244, 246, 249 );
+  --second-font-color: rgb(53, 152, 250);
 
 }
 

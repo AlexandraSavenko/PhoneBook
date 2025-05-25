@@ -17,14 +17,14 @@ export default function LoginForm() {
   return (
     <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
       <Form className={css.form}>
-        <label>
-          Email
-          <Field type="email" name="email" />
-        </label>
-        <label>
-          Password
-          <Field type="password" name="password" />
-        </label>
+        <div className={css.inputwrap}>
+        <Field type="email" name="email" className={css.input} placeholder=" " autocomplete="off" />
+        <label htmlFor="email" className={css.label}>Email</label>
+        </div>
+        <div className={css.inputwrap}>
+        <Field type="password" name="password" className={css.input} placeholder=" " autocomplete="off"/>
+        <label htmlFor="password" className={css.label}>Password</label>
+        </div>
         <button type="submit">Log In</button>
       </Form>
     </Formik>

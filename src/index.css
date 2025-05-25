@@ -12,7 +12,7 @@
 }
 
 [data-theme ="dark"]{
-  --background-color: rgba(133, 193, 233, 0.5);
+  --background-color: rgb(96, 127, 148);
   --button-bg-color: rgb(40, 56, 71); 
   --background-image: url("./img/galaxy-night-landscape-min.jpg");
   --border-color: rgb(88, 168, 248);
@@ -28,6 +28,11 @@
 
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 a {
   text-decoration: none;
 }

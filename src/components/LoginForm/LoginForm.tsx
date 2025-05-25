@@ -3,12 +3,18 @@ import css from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/operations";
 import { AppDispatch } from "../../redux/store";
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { useState } from "react";
+
 
 export interface LogFormValues {
 email: string,
 password: string,
 }
 export default function LoginForm() {
+const [visible, setVisible] = useState(false)
+
   const dispatch = useDispatch<AppDispatch>();
   const handleSubmit = (values: LogFormValues, actions: FormikHelpers<LogFormValues>): void => {
     dispatch(logIn(values));
@@ -22,8 +28,9 @@ export default function LoginForm() {
         <label htmlFor="email" className={css.label}>Email</label>
         </div>
         <div className={css.inputwrap}>
-        <Field type="password" name="password" className={css.input} placeholder=" " autocomplete="off"/>
+        <Field type={visible ? "text" : "password"} name="password" className={css.input} placeholder=" " autocomplete="off"/>
         <label htmlFor="password" className={css.label}>Password</label>
+        <span className={css.eye} onClick={() => setVisible(!visible)} >{visible ? <FaEyeSlash/> : <FaEye/>}</span>
         </div>
         <button type="submit">Log In</button>
       </Form>

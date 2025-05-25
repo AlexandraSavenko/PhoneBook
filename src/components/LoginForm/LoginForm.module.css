@@ -7,6 +7,7 @@
     background-color: var(--background-color);
     border-radius: 4px;
     min-width: 320px;
+    margin: 0 auto;
 }
 .inputwrap{
     position: relative;
@@ -38,18 +39,25 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.label:hover + .input{
-    border-color: var(--border-color);
-}
 .input:focus{
     outline: none;
 }
-.input:focus + .label, .input:not(:placeholder-shown) + .label{
+.input:hover + .label, .input:focus + .label, .input:not(:placeholder-shown) + .label{
     top: -8px;
     left: 6px;
     font-size: 12px;
     color: var(--border-color);
     z-index: 1111;
+}
+.eye{
+position: absolute;
+top: 8px;
+right: 8px;
+cursor: pointer;
+}
+
+.input-wrap:hover + .eye, .input-wrap:focus-within + .eye{
+    color: var(--border-color);
 }
 button{
     padding: 8px 16px;

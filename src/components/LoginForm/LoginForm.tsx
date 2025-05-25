@@ -24,11 +24,11 @@ const [visible, setVisible] = useState(false)
     <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
       <Form className={css.form}>
         <div className={css.inputwrap}>
-        <Field type="email" name="email" className={css.input} placeholder=" " autocomplete="off" />
+        <Field type="email" name="email" className={css.input} placeholder=" " autoComplete="off" />
         <label htmlFor="email" className={css.label}>Email</label>
         </div>
         <div className={css.inputwrap}>
-        <Field type={visible ? "text" : "password"} name="password" className={css.input} placeholder=" " autocomplete="off"/>
+        <Field type={visible ? "text" : "password"} name="password" className={css.input} placeholder=" " autoComplete="off"/>
         <label htmlFor="password" className={css.label}>Password</label>
         <span className={css.eye} onClick={() => setVisible(!visible)} >{visible ? <FaEyeSlash/> : <FaEye/>}</span>
         </div>

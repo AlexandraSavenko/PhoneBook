@@ -43,17 +43,17 @@ export default function RegisterForm() {
         {({ errors }) => (
       <Form className={css.form}>
         <div className={css.inputwrap}>
-        <Field type="text" name="name" className={css.input} placeholder=" " autocomplete="off" />
+        <Field type="text" name="name" className={css.input} placeholder=" " autoComplete="off" />
         <label htmlFor="name" className={css.label}>Usarname</label>
         {errors.name && <p>{errors.name}</p>}
         </div>
         <div className={css.inputwrap}>
-        <Field type="email" name="email" className={css.input} placeholder=" " autocomplete="off" />
+        <Field type="email" name="email" className={css.input} placeholder=" " autoComplete="off" />
         <label htmlFor="email" className={css.label}>Email</label>
         {errors.email && <p>{errors.email}</p>}
         </div>
         <div className={css.inputwrap}>
-        <Field type={visible ? "text" : "password"} name="password" className={css.input} placeholder=" " autocomplete="off"/>
+        <Field type={visible ? "text" : "password"} name="password" className={css.input} placeholder=" " autoComplete="off"/>
         <label htmlFor="password" className={css.label}>Password</label>
         <span className={css.eye} onClick={() => setVisible(!visible)} >{visible ? <FaEyeSlash/> : <FaEye/>}</span>
         {errors.password && <p>{errors.password}</p>}

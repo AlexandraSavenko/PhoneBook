@@ -8,7 +8,6 @@ interface RegRoutProps {
 }
 const RestrictedRoute: React.FC<RegRoutProps> = ({ component, redirectTo }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  console.log(redirectTo);
 
   return isLoggedIn ? <Navigate to={redirectTo} /> : component;
 }

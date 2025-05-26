@@ -21,6 +21,7 @@
   --second-border-color: #FFE81F;
   --first-font-color: rgb(244, 246, 249 );
   --second-font-color: rgb(53, 152, 250);
+  --warning-color: rgb(202, 55, 1);
 }
 
 /* <a target="_blank" href="https://icons8.com/icon/TmBeo7H4cjCl/yoda">Yoda</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
@@ -34,6 +35,8 @@
   --second-border-color: #FFE81F;
   --first-font-color: rgb(244, 246, 249 );
   --second-font-color: rgb(53, 152, 250);
+  --warning-color: rgb(202, 55, 1);
+
 
 }
 

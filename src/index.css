@@ -96,7 +96,7 @@ button {
 #root {
   width: 100%;
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -107,8 +107,11 @@ button {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
+.container{
+  background-color: var(--second-bg-color);
+}
 @media only screen and (min-width: 375px) {
   .container {
     max-width: 375px;
@@ -117,14 +120,12 @@ button {
 
 @media only screen and (min-width: 768px) {
   .container {
-    padding: 0 32px;
     max-width: 768px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .container {
-    padding: 0 100px;
-    max-width: 1280px;
+    max-width: 1000px;
   }
 }

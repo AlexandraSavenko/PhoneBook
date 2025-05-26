@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import css from "../FormStyles.module.css";
 import { register } from "../../redux/auth/operations";
-import { Field, Form, Formik, FormikHelpers } from "formik";
+import { Field, Form, Formik, FormikHelpers, ErrorMessage } from "formik";
 import { AppDispatch } from "../../redux/store";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -56,7 +56,10 @@ export default function RegisterForm() {
         <Field type={visible ? "text" : "password"} name="password" className={css.input} placeholder=" " autoComplete="off"/>
         <label htmlFor="password" className={css.label}>Password *</label>
         <span className={css.eye} onClick={() => setVisible(!visible)} >{visible ? <FaEyeSlash/> : <FaEye/>}</span>
-        {errors.password ? <p className={css.warning}>{errors.password}</p> : <p className={css.warning}>The password must be 8+ characters long, including at least one uppercase letter, one number and one symbol</p> }
+        {errors.password ? 
+        <ErrorMessage name="password" component="span" className={css.warning} />
+        // <p className={css.warning}>{errors.password}</p> 
+        : <p className={css.warning}>The password must be 8+ characters long, including at least one uppercase letter, one number and one symbol</p> }
         </div>
         <button type="submit">Register</button>
       </Form>

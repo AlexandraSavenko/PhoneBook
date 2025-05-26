@@ -64,4 +64,10 @@ cursor: pointer;
 .warning{
     font-size: 12px;
     text-wrap: wrap;
+    margin-top: 8px;
+    max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 320px;
 }
+

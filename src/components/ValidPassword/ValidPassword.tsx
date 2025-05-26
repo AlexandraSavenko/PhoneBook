@@ -11,7 +11,7 @@ interface Props {
 }
 const ValidPassword: React.FC<Props> = ({isValid: {a, A, num, sym}}) => {
 return <div className={css.wrap}>
-    <p>Your password must include:</p>
+    <p>Your password must be 8+ long and include:</p>
  <ul className={css.list}>
     <li className={clsx(a ? css.valid : css.invalid)}>
         letters a-z

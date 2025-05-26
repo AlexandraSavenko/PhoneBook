@@ -30,12 +30,11 @@ export default function RegisterForm() {
       num: /\d/.test(value),
       sym: /[^\w]/.test(value),
     })
-    console.log(valid)
     }
   
   const FormSchema = Yup.object().shape({
     name: Yup.string().required(""),
-    email: Yup.string().email("Must be a valid email!").required(""),
+    email: Yup.string().email("This is not an email and you know it!").required("We do need your email!"),
     password: Yup.string()
     .min(8, 'Password must be 8 characters long')
     .matches(/[0-9]/, 'Password requires a number')
@@ -58,14 +57,14 @@ export default function RegisterForm() {
       onSubmit={handleSubmit}>
       <Form className={css.form}>
         <div className={css.inputwrap}>
-        <Field type="text" name="name" className={css.input} placeholder=" " autoComplete="off" />
-        <label htmlFor="name" className={css.label}>Usarname *</label>
+        <Field type="text" name="name" className={css.input} placeholder=" " autoComplete="off" required minlength="1" />
+        <label htmlFor="name" className={css.label}>Username *</label>
 
         </div>
         <div className={css.inputwrap}>
-        <Field type="email" name="email" className={css.input} placeholder=" " autoComplete="off" />
+        <Field type="email" name="email" className={css.input} placeholder=" " autoComplete="off" required />
         <label htmlFor="email" className={css.label}>Email *</label>
-
+        <ErrorMessage name="email" component="span" className={css.message}/>
         </div>
         <div className={css.inputwrap}>
         <Field 
@@ -75,7 +74,8 @@ export default function RegisterForm() {
         value={password} 
         onChange={handleChange} 
         placeholder=" " 
-        autoComplete="off"/>
+        autoComplete="off"
+        required/>
         <label htmlFor="password" className={css.label}>Password *</label>
         <span className={css.eye} onClick={() => setVisible(!visible)} >{visible ? <FaEyeSlash/> : <FaEye/>}</span>
         <ValidPassword isValid={valid}/>

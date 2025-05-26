@@ -18,7 +18,8 @@
   --button-bg-color: rgb(40, 56, 71); 
   --background-image: url("./img/galaxy-night-landscape-min.jpg");
   --border-color: rgb(88, 168, 248);
-  --second-border-color: #FFE81F;
+  --second-border-color: #FFE81F;  
+  /* https://www.schemecolor.com/star-wars-logo-colors.php */
   --first-font-color: rgb(244, 246, 249 );
   --second-font-color: rgb(53, 152, 250);
   --warning-color: rgb(202, 55, 1);
@@ -32,7 +33,7 @@
   --button-bg-color: rgb(40, 56, 71);
   --background-image: url("./img/desert-day-landscape-min.jpg");
   --border-color: rgb(88, 168, 248);
-  --second-border-color: #FFE81F;
+  --second-border-color: #FFE81F;  
   --first-font-color: rgb(244, 246, 249 );
   --second-font-color: rgb(53, 152, 250);
   --warning-color: rgb(202, 55, 1);

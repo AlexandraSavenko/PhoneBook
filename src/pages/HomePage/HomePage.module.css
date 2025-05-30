@@ -6,7 +6,7 @@
     font-family: var(--first-font);
     font-weight: bold;
     font-size: 4rem;
-    line-height: 1;
+    line-height: 0.6;
     color: black;
     text-shadow:
     -1px -1px 0 var(--second-border-color),
@@ -19,5 +19,6 @@
 .header span{
   display: block;
   line-height: 1;
+  font-size: 4.5rem;
 }
 

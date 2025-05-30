@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Light from "../../img/icons8-r2-d2.svg"
+import Light from "../../img/icons8-yoda.svg"
 import Dark from "../../img/icons8-star-wars.svg"
 import css from './ThemeSwitcher.module.css'
 import clsx from 'clsx'
